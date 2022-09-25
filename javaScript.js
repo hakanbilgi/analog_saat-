@@ -10,14 +10,16 @@ function tiktak() {
   sec.style.transform = `rotate(${180 + second * 6}deg)`;
   min.style.transform = `rotate(${180 + minute * 6}deg)`;
   hours.style.transform = `rotate(${180 + hour * 30}deg)`;
-
-
 }
 
 setInterval(tiktak, 1000);
 
-document.querySelector(".clock").addEventListener("mousemove", changeBackground);
+document
+  .querySelector(".clock")
+  .addEventListener("mousemove", changeBackground);
 
-function changeBackground(e){
-    document.querySelector(".clock").style.backgroundColor = `rgb(${e.clientX % 255}, ${e.clientY % 255}, ${(e.clientX + e.clientY) % 255})`
+function changeBackground(e) {
+  document.querySelector(".clock").style.backgroundColor = `rgb(${
+    e.clientX % 255
+  }, ${e.clientY % 255}, ${(e.clientX + e.clientY) % 255})`;
 }
