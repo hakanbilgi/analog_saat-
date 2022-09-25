@@ -11,7 +11,13 @@ function tiktak() {
   min.style.transform = `rotate(${180 + minute * 6}deg)`;
   hours.style.transform = `rotate(${180 + hour * 30}deg)`;
 
-  
+
 }
 
 setInterval(tiktak, 1000);
+
+document.querySelector(".clock").addEventListener("mousemove", changeBackground);
+
+function changeBackground(e){
+    document.querySelector(".clock").style.backgroundColor = `rgb(${e.clientX}, ${e.clientY}, ${e.clientX + e.clientY})`
+}
