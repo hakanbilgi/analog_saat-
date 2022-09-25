@@ -3,6 +3,9 @@
  const hours = document.querySelector(".hours");
 
  function tiktak (){
+let seconds = new Date().getSeconds();
+let minute = new Date().getMinutes();
+let hour = new Date().getHours();
 
 
 
