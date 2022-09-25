@@ -19,5 +19,5 @@ setInterval(tiktak, 1000);
 document.querySelector(".clock").addEventListener("mousemove", changeBackground);
 
 function changeBackground(e){
-    document.querySelector(".clock").style.backgroundColor = `rgb(${e.clientX}, ${e.clientY}, ${e.clientX + e.clientY})`
+    document.querySelector(".clock").style.backgroundColor = `rgb(${e.clientX % 255}, ${e.clientY % 255}, ${(e.clientX + e.clientY) % 255})`
 }
